@@ -1,0 +1,169 @@
+/*
+  The following Tailwind directives require processing by Tailwind CSS (PostCSS).
+  Make sure your build tool (e.g., CRA with craco, Vite, or Next.js) is configured to use Tailwind.
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans bg-gray-50 text-gray-800 leading-relaxed m-0 p-0;
+  }
+
+  a {
+    @apply text-green-600 transition-colors duration-300 no-underline;
+  }
+
+  a:hover {
+    color: #166534; /* Tailwind text-green-800 */
+  }
+}
+
+@layer components {
+  .container {
+    max-width: 1280px; /* equivalent to max-w-screen-xl */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;  /* px-6 */
+    padding-right: 1.5rem;
+  }
+
+  .card {
+    @apply p-6 bg-white rounded-xl shadow-md transition-transform duration-200 hover:-translate-y-1;
+  }
+
+  .btn {
+    display: inline-block;
+    background-color: #16a34a; /* Tailwind bg-green-600 */
+    color: #fff;
+    font-weight: bold;
+    padding-top: 0.75rem;   /* py-3 */
+    padding-bottom: 0.75rem;
+    padding-left: 1.5rem;   /* px-6 */
+    padding-right: 1.5rem;
+    border-radius: 0.5rem;  /* rounded-lg */
+    transition: background-color 150ms;
+  }
+  .btn:hover {
+    background-color: #15803d; /* Tailwind bg-green-700 */
+  }
+
+  .hero {
+    position: relative;
+    height: 80vh;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem; /* Tailwind text-5xl */
+    font-weight: 800; /* Tailwind font-extrabold */
+    line-height: 1;
+  }
+
+  .hero p {
+    font-size: 1.25rem; /* Tailwind text-xl */
+    margin-top: 1rem;    /* Tailwind mt-4 */
+  }
+
+  .home-section {
+    padding-top: 4rem;   /* py-16 */
+    padding-bottom: 4rem;
+  }
+
+  .home-section h2 {
+    font-size: 2.25rem; /* Tailwind text-4xl */
+    line-height: 2.5rem;
+    margin-bottom: 1rem; /* Tailwind mb-4 */
+  }
+
+  .home-section p {
+    max-width: 42rem;      /* Tailwind max-w-2xl */
+    margin-left: auto;     /* Tailwind mx-auto */
+    margin-right: auto;
+    color: #4b5563;        /* Tailwind text-gray-600 */
+  }
+
+  .shop-grid {
+    display: grid;
+    gap: 2rem; /* Tailwind gap-8 */
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding-top: 2rem;  /* Tailwind py-8 */
+    padding-bottom: 2rem;
+  }
+
+  @media (min-width: 640px) {
+    .shop-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 768px) {
+    .shop-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 1024px) {
+    .shop-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  .shop-title {
+    font-size: 2.25rem;   /* Tailwind text-4xl */
+    line-height: 2.5rem;
+    margin-bottom: 2rem;  /* Tailwind mb-8 */
+    text-align: center;   /* Tailwind text-center */
+  }
+
+  .about-section {
+    padding-top: 4rem;    /* py-16 */
+    padding-bottom: 4rem;
+    padding-left: 1.5rem; /* px-6 */
+    padding-right: 1.5rem;
+    background-color: #f3f4f6; /* Tailwind bg-gray-100 */
+    text-align: center;
+  }
+
+  .about-section h2 {
+    font-size: 1.875rem; /* Tailwind text-3xl */
+    line-height: 2.25rem;
+    margin-bottom: 1rem;  /* Tailwind mb-4 */
+  }
+
+  .about-section p {
+    @apply max-w-3xl mx-auto text-gray-700;
+  }
+
+  .contact-form {
+    @apply max-w-xl mx-auto mt-8 bg-white p-8 rounded-xl shadow-md;
+  }
+
+  .contact-form h2 {
+    @apply text-3xl mb-6;
+  }
+
+  .contact-form label {
+    @apply block text-left font-semibold mt-4;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    @apply w-full p-3 mt-2 border border-gray-300 rounded-md;
+  }
+
+  .contact-form button {
+    @apply mt-6;
+  }
+
+  .footer {
+    @apply bg-gray-800 text-gray-100 py-8 text-center;
+  }
+
+  .footer a {
+    @apply text-green-200 hover:text-green-400;
+  }
+}

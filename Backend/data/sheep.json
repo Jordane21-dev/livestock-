@@ -1,0 +1,24 @@
+// Simulated 40 sheep records
+const sheepData = Array.from({ length: 20 }, (_, i) => {
+  const breeds = ['Merino', 'Suffolk', 'Dorper'];
+  const breed = breeds[i % 3];
+  const names = ['Daisy', 'Baa-rt', 'Cloud', 'Woolly', 'Rammy', 'Ewe-gene', 'Fluffy', 'Snowball', 'Shadow', 'Nimbus', 'Pebbles', 'Blizzard', 'Mossy', 'Maple', 'Cotton', 'Midnight', 'Frosty', 'Speckle', 'Buttercup', 'Luna'];
+  const name = names[i % names.length] + (i >= 20 ? ` ${i + 1}` : '');
+  const price = 700 + Math.floor(Math.random() * 500);
+  const age = `${1 + Math.floor(Math.random() * 3)} years ${Math.floor(Math.random() * 12)} months`;
+  const imageUrl = `https://source.unsplash.com/400x300/?sheep&sig=${i}`;
+  return {
+    id: `s${i + 1}`,
+    name,
+    breed,
+    age,
+    price,
+    imageUrl,
+    dob: '2022-01-01',
+    sex: i % 2 === 0 ? 'Female' : 'Male',
+    fertility: i % 2 === 0 ? 'Fertile' : 'Sterile',
+    temperament: ['Calm', 'Playful', 'Shy'][i % 3],
+  };
+});
+
+module.exports = sheepData;
