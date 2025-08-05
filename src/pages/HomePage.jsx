@@ -27,10 +27,6 @@ function HomePage() {
       quote: 'Prompt delivery, responsive service, and great genetics in their rams. Highly recommend them.',
     },
   ];
-<div className="bg-blue-500 text-white p-4 text-center">
-  Tailwind is working! 🎉
-</div>
-
   return (
     <main>
       {/* Hero Section */}
@@ -58,24 +54,23 @@ function HomePage() {
       {/* Why Choose Us Section */}
       <section className="bg-green-600 py-16 px-4">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold text-red-800 mb-6">Why Choose Jennifer Livestock?</h2>
+          <h2 className="text-3xl font-bold text-white mb-6">Why Choose Jennifer Livestock?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
             <div>
-              <h3 className="text-xl font-semibold mb-2">Certified Health & Genetics</h3>
-              <p className="text-gray-600">All our sheep are health-checked and bred from high-quality stock, ensuring great productivity and long-term value.</p>
+              <h3 className="text-xl font-semibold mb-2 text-white">Certified Health & Genetics</h3>
+              <p className="text-green-100">All our sheep are health-checked and bred from high-quality stock, ensuring great productivity and long-term value.</p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2">Trusted Farm Network</h3>
-              <p className="text-gray-600">We work only with verified ethical farms to maintain animal welfare and customer confidence.</p>
+              <h3 className="text-xl font-semibold mb-2 text-white">Trusted Farm Network</h3>
+              <p className="text-green-100">We work only with verified ethical farms to maintain animal welfare and customer confidence.</p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2">Nationwide Delivery</h3>
-              <p className="text-gray-600">Get livestock delivered safely to your doorstep, with flexible delivery options and expert handling.</p>
+              <h3 className="text-xl font-semibold mb-2 text-white">Nationwide Delivery</h3>
+              <p className="text-green-100">Get livestock delivered safely to your doorstep, with flexible delivery options and expert handling.</p>
             </div>
           </div>
         </div>
       </section>
-ss
       {/* Livestock Categories */}
       <section className="bg-gray-50 py-16 px-4">
         <div className="container mx-auto text-center">
